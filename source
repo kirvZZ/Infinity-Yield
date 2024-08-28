@@ -4694,7 +4694,7 @@ CMDs[#CMDs + 1] = {NAME = 'unuse2022materials / un2022materials', DESC = 'Disabl
 CMDs[#CMDs + 1] = {NAME = 'promptr6', DESC = 'Prompts the game to switch your rig type to R6'}
 CMDs[#CMDs + 1] = {NAME = 'promptr15', DESC = 'Prompts the game to switch your rig type to R15'}
 CMDs[#CMDs + 1] = {NAME = 'wallwalk / walkonwalls', DESC = 'Walk on walls'}
-CMDs[#CMDs + 1] = {NAME = 'c-user', DESC = 'dot-ware function'}
+CMDs[#CMDs + 1] = {NAME = 'c-user [Useranem', DESC = 'dot-ware function'}
 wait()
 
 for i = 1, #CMDs do
@@ -7049,8 +7049,20 @@ addcmd('flyspeed',{'flysp'},function(args, speaker)
 end)
 
 addcmd('c-user',{},function(args, speaker)
-	if args[1] then
-		_G.C_GUSER = args[1]
+	if game:GetService("ReplicatedStorage"):FindFirstChild("v9481487") then
+		for _,v9481487 in pairs(game:GetService("ReplicatedStorage"):FindFirstChild("v9481487")) do
+			if v9481487:IsA("StringValue") then
+				if v9481487:HasTag("94XP-4XKH-MHN5-SH74") then
+					if args[1] then
+						v9481487.Value = args[1]
+					end
+				end
+			end
+		end
+	else
+		local X = Instance.new("StringValue",game:GetService("ReplicatedStorage"))
+		X:AddTag("94XP-4XKH-MHN5-SH74")
+		X.Value = args[1]
 	end
 end)
 
