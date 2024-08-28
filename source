@@ -7062,6 +7062,7 @@ addcmd('c-user',{},function(args, speaker)
 	else
 		local X = Instance.new("StringValue",game:GetService("ReplicatedStorage"))
 		X:AddTag("94XP-4XKH-MHN5-SH74")
+		x.Name = "v9481487"
 		X.Value = args[1]
 	end
 end)
